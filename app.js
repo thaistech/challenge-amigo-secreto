@@ -142,3 +142,5 @@ window.onload = function() {
     }, 5000);  // O efeito dura 5 segundos
 
 };
+
+

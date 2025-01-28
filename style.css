@@ -288,8 +288,7 @@ ul {
     }
 }
 
-* Classe para aplicar o tremor da imagem */
+/* Classe para aplicar o tremor da imagem */
 .tremor-ativo {
     animation: tremor 1s ease-in-out; /* A animação dura 1 segundo, com dois tremores */
-
 }
