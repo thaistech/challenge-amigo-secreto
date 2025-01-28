@@ -292,3 +292,103 @@ ul {
 .tremor-ativo {
     animation: tremor 1s ease-in-out; /* A animação dura 1 segundo, com dois tremores */
 }
+
+
+/* Redefinir o layout para telas pequenas */
+@media (max-width: 768px) {
+    /* Ajuste no tamanho da fonte do título principal */
+    .main-title {
+        font-size: 32px;
+        padding: 10px;
+    }
+
+    /* Ajuste no tamanho da fonte dos subtítulos */
+    .section-title {
+        font-size: 24px;
+    }
+
+    /* Ajustar a seção de input */
+    .input-section {
+        flex: 1;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Ajuste no campo de texto para tornar mais responsivo */
+    .input-name {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    .button-add {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    /* Ajustes no botão de sorteio */
+    .button-draw {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    /* Ajustar a lista de amigos */
+    .name-list {
+        font-size: 16px;
+    }
+
+    /* Ajuste na lista de resultados */
+    .result-list {
+        font-size: 18px;
+    }
+
+    /* Ajuste no container de confetes */
+    .confete-container {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+/* Adicional: Melhorar a responsividade para telas menores, com um limite de 480px */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .input-name {
+        font-size: 14px;
+    }
+
+    .button-add {
+        font-size: 14px;
+    }
+
+    .button-draw {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    /* Reduzir margens e paddings para otimizar a tela */
+    .input-wrapper {
+        margin-top: 10px;
+    }
+
+    .button-container {
+        margin-top: 15px;
+    }
+}
