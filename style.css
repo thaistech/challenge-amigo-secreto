@@ -231,27 +231,25 @@ ul {
 }
 
 
-/* Estilos gerais para o título */
+/* Garantir que o título "Amigo Secreto" apareça */
 .main-title {
-    font-size: 48px;
+    font-size: 48px; /* Tamanho inicial do título */
     font-family: "Merriweather", serif;
     font-weight: 900;
     font-style: italic;
     color: var(--color-white);
     display: inline-block;
+    text-align: center; /* Centralizar o texto horizontalmente */
+    padding: 10px;
+    white-space: nowrap; /* Impede que o título quebre em várias linhas */
 }
 
-/* Animação para fazer as letras piscarem */
+
+/* Animação de piscar ajustada */
 @keyframes piscar {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 /* Classe que aplica a animação nas letras */
@@ -264,6 +262,8 @@ ul {
 .main-title .word {
     margin-right: 10px; /* Espaço entre as palavras */
 }
+
+
 
 
 /* Efeito de tremor para a imagem */
@@ -292,6 +292,20 @@ ul {
 .tremor-ativo {
     animation: tremor 1s ease-in-out; /* A animação dura 1 segundo, com dois tremores */
 }
+
+
+/* Responsividade para dispositivos menores (tablets) */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 36px; /* Tamanho menor para tablets */
+    }
+
+    .header-banner {
+        flex-direction: column; /* Organizar a imagem e o título em coluna */
+        align-items: center; /* Centralizar imagem e título */
+    }
+}
+
 
 
 /* Redefinir o layout para telas pequenas */
@@ -391,4 +405,49 @@ ul {
     .button-container {
         margin-top: 15px;
     }
+}
+
+
+/* Responsividade para dispositivos menores (tablets) */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 36px; /* Tamanho menor para tablets */
+    }
+
+    .header-banner {
+        flex-direction: column; /* Organizar a imagem e o título em coluna */
+        align-items: center; /* Centralizar imagem e título */
+    }
+}
+
+/* Responsividade para dispositivos pequenos (celulares) */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 28px; /* Tamanho ainda menor para celulares */
+    }
+
+    .header-banner {
+        flex-direction: column; /* Colocar o título acima da imagem */
+        padding: 20px 10px;
+    }
+
+    .header-banner img {
+        max-width: 80%; /* Ajuste da imagem para caber melhor na tela */
+        height: auto;
+    }
+}
+
+/* Garantir que a imagem na header não sobreponha o título */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+    position: relative;
+}
+
+.header-banner img {
+    max-width: 100%; /* Ajuste responsivo para que a imagem não ultrapasse os limites */
+    height: auto;
 }
