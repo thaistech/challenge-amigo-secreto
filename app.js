@@ -112,13 +112,12 @@ function gerarConfetes() {
         const confete = document.createElement('div');
         confete.classList.add('confete');
         
-        // Define uma posição aleatória para cada confete
-        confete.style.left = `${Math.random() * 100}vw`; // Aleatório na largura da tela
-        confete.style.animationDuration = `${Math.random() * 2 + 2}s`; // Duração aleatória
-        confete.style.animationDelay = `${Math.random() * 2}s`; // Atraso aleatório para os confetes caírem de tempos di
-
-        confeteContainer.appendChild(confete);
-    }
+    // Define uma posição aleatória para cada confete
+    confete.style.left = `${Math.random() * 100}vw`;
+    confete.style.animationDuration = `${Math.random() * 2 + 2}s`;
+    confete.style.animationDelay = `${Math.random() * 2}s`;
+    confeteContainer.appendChild(confete);
+}
 
     // Adiciona os confetes ao body
     document.body.appendChild(confeteContainer);
