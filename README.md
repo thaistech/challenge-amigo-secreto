@@ -34,7 +34,7 @@ Veja como a página do "Amigo Secreto" fica quando você clica para sortear o am
 
 Confira o resultado em ação no gif abaixo:
 
-![Animação do Resultado](assets/amigo-secreto.gif)
+![Animação do Resultado](assets/amigo.gif)
 
 ---
 
