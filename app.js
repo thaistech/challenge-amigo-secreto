@@ -3,14 +3,24 @@
 // Lista para armazenar os nomes dos amigos
 let amigos = [];
 
+
 // Função para adicionar o nome à lista
 function adicionarAmigo() {
     const nomeInput = document.getElementById('amigo');
     const nome = nomeInput.value.trim();
 
+    // Definir o limite de caracteres
+    const limiteDeCaracteres = 10;
+
     // Validando se o campo não está vazio
     if (nome === '') {
         alert('Por favor, insira um nome válido!');
+        return;
+    }
+
+    // Validando o limite de caracteres
+    if (nome.length > limiteDeCaracteres) {
+        alert(`O nome deve ter no máximo ${limiteDeCaracteres} caracteres.`);
         return;
     }
 
@@ -22,6 +32,7 @@ function adicionarAmigo() {
     atualizarLista();
 }
 
+
 // Função para atualizar a lista na tela
 function atualizarLista() {
     const listaAmigos = document.getElementById('listaAmigos');
@@ -30,10 +41,35 @@ function atualizarLista() {
     // Adiciona cada amigo à lista
     amigos.forEach((amigo, index) => {
         const li = document.createElement('li');
+        
+        // Adiciona o nome do amigo à lista
         li.textContent = amigo;
+        
+        // Cria o botão de remover
+        const buttonRemover = document.createElement('button');
+        buttonRemover.textContent = 'Remover';
+        buttonRemover.classList.add('button-remover');
+        
+        // Adiciona o evento de clique ao botão de remover
+        buttonRemover.onclick = () => removerAmigo(index);
+        
+        // Adiciona o botão de remover ao <li>
+        li.appendChild(buttonRemover);
+        
+        // Adiciona o item à lista
         listaAmigos.appendChild(li);
     });
 }
+
+// Função para remover um amigo da lista
+function removerAmigo(index) {
+    // Remove o amigo pelo índice
+    amigos.splice(index, 1);
+    
+    // Atualiza a lista visual após a remoção
+    atualizarLista();
+}
+
 
 // Função para sortear um amigo aleatoriamente
 function sortearAmigo() {
@@ -132,15 +168,66 @@ window.onload = function() {
         });
     }, 3000); // A animação vai durar 3 segundos
 
+
     // Adiciona o efeito de tremor na imagem
     const imagem = document.querySelector('.header-banner img');
     imagem.classList.add('tremor-ativo');  // Ativa o tremor da imagem
 
+    
     // Após o tremor (1s), remove a animação da imagem
     setTimeout(() => {
         imagem.classList.remove('tremor-ativo'); // Remove o tremor após a animação
     }, 5000);  // O efeito dura 5 segundos
 
 };
+
+// Função para reiniciar o sorteio
+function novoSorteio() {
+    // Limpa a lista de amigos (o array)
+    amigos = [];
+
+    // Limpa o campo de entrada de texto
+    const nomeInput = document.getElementById('amigo');
+    nomeInput.value = '';
+
+    // Limpa a lista visual de amigos
+    const listaAmigos = document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = '';
+
+    // Limpa o resultado do sorteio
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = '';
+}
+
+
+// Seleciona a imagem e o áudio
+const image = document.getElementById("image");
+const audio = document.getElementById("audio");
+
+function vibrar() {
+    if (audio.paused) { // Verifica se o áudio está pausado
+        audio.play().catch((err) => {
+            console.error('Erro ao tentar tocar o áudio: ', err);
+        });
+    }
+
+    // Inicia o efeito de vibração da imagem
+    image.style.transition = "transform 0.1s ease-in-out"; // Transição suave
+    image.style.transform = "translateX(-10px)"; // Movimenta para a esquerda
+    setTimeout(() => {
+        image.style.transform = "translateX(10px)"; // Movimenta para a direita
+    }, 100);
+
+    setTimeout(() => {
+        image.style.transform = "translateX(0)"; // Retorna à posição original
+    }, 200);
+}
+
+
+// Chama a função vibrar para testarmos a vibração e o áudio
+vibrar(); // Quando a função for chamada, o áudio tocará e a imagem tremerá
+
+
+
 
 
