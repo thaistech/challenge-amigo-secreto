@@ -34,7 +34,30 @@ Veja como a página do "Amigo Secreto" fica quando você clica para sortear o am
 
 Confira o resultado em ação no gif abaixo:
 
-![Animação do Resultado]([[https://media.giphy.com/media/xT0xezbu6D0dqX0kU8/giphy.gif](https://ezgif.com/crop/ezgif-5e654d0dffda8.gif](https://ezgif.com/crop/ezgif-5e654d0dffda8.gif)))
+![Animação do Resultado](assets/amigo-secreto.gif)
+
+---
+
+## 📱 Responsividade
+
+Este projeto foi desenvolvido com design responsivo, garantindo uma experiência de usuário otimizada em diferentes tamanhos de tela.
+
+### 🖥️ Visualização por Dispositivo
+Abaixo está um resumo de como o layout se adapta a diferentes tamanhos de tela:
+
+| Tamanho de Tela          | Ajustes de Layout                                                                 |
+|--------------------------|-----------------------------------------------------------------------------------|
+| **Desktop (largo)**      | 🖥️ **Layout otimizado** para grandes telas, com elementos bem distribuídos.          |
+| **Tablet (máximo 768px)**| 📱 **Ajuste de título**: O título diminui para 36px. O banner se reorganiza em uma coluna, com entradas ajustadas para facilitar o uso. |
+| **Smartphone (máximo 480px)**| 📲 **Compactação de elementos**: O título reduz para 24px. Elementos e botões se compactam para melhor interação. |
+
+### 🔍 Como Testar a Responsividade
+1. 🔍 Abra o projeto em seu navegador.
+2. ⚙️ Utilize a ferramenta de **inspeção** (F12) e ative o **modo responsivo**.
+3. 📱 Teste diferentes tamanhos de tela para ver as adaptações.
+
+
+
 
 
 ---

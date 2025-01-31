@@ -1,3 +1,4 @@
+
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 
 // Lista para armazenar os nomes dos amigos
@@ -226,8 +227,6 @@ function vibrar() {
 
 // Chama a função vibrar para testarmos a vibração e o áudio
 vibrar(); // Quando a função for chamada, o áudio tocará e a imagem tremerá
-
-
 
 
 
